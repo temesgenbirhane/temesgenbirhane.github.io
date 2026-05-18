@@ -1,7 +1,11 @@
 (function () {
-  var toggle = document.getElementById('theme-toggle');
-  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  var saved = localStorage.getItem('theme');
+  const toggle = document.getElementById('theme-toggle');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const saved = localStorage.getItem('theme');
+
+  if (!toggle) {
+    return;
+  }
 
   if (saved === 'dark' || (!saved && prefersDark)) {
     document.body.classList.add('dark');
