@@ -1,0 +1,70 @@
+:root {
+  --bg: #f4f7fb;
+  --text: #1e293b;
+  --card: #ffffff;
+  --accent: #2563eb;
+}
+
+body.dark {
+  --bg: #0f172a;
+  --text: #e2e8f0;
+  --card: #1e293b;
+  --accent: #60a5fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.site-header {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+}
+
+#theme-toggle {
+  margin-top: 1rem;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+a {
+  color: var(--accent);
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
